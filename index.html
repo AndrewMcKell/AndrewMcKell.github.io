@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew McKell | Portfolio</title>
     <meta name="description" content="Andrew McKell's portfolio">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -12,30 +13,45 @@
         <nav class="container">
             <a class="logo" href="index.html">Home</a>
             <div class="nav-links">
-                <a href="about.html">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="index.html#about">About</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#contact">Contact</a>
             </div>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero container">
-            <h1>Andrew McKell</h1>
-            <p class="intro">
-                I am a fourth year Engineering Physics student at UBC.
-            </p>
-            <div class="actions">
-                <a class="button primary" href="#projects">View my projects</a>
-                <a class="button secondary" href="https://github.com/andrewmckell">GitHub profile</a>
+            <div class="hero-text">
+                <p class="greeting">Hi, I'm</p>
+                <h1>Andrew McKell</h1>
+                <p class="intro">
+                    I'm a fourth year Engineering Physics student at UBC.
+                </p>
+                <div class="actions">
+                    <a class="button primary" href="#projects">View my projects</a>
+                    <a class="button secondary" href="https://github.com/andrewmckell">GitHub profile</a>
+                </div>
             </div>
+            <img class="hero-photo" src="images/headshot.png" alt="Andrew McKell">
         </section>
 
         <section id="about" class="section container">
             <h2>About me</h2>
-            <p>
-                I am a fourth year Engineering Physics student at UBC. 
-            </p>
+                <p>
+                    I'm an Engineering Physics student at the University
+                    of British Columbia. I am analytical, detail-oriented,
+                    and I am passionate about problem solving.
+                </p>
+                <p>
+                    Currently, I'm in Montreal working with GHGSat, where
+                    we use satellites and aircraft to detect and quantify
+                    greenhouse gas emissions across the globe. I'm also the
+                    charger team lead at UBC Thunderbikes, a design team 
+                    working on building an electric motorbike and racing
+                    it in competition.
+                </p>
         </section>
 
         <section id="projects" class="section container">
@@ -56,12 +72,19 @@
         <section id="contact" class="section container">
             <h2>Contact</h2>
             <p>
-                You can view my GitHub at
-                <a href="https://github.com/andrewmckell">https://github.com/andrewmckell</a>
-                and my LinkedIn at
-                <a href="https://www.linkedin.com/in/andrew-mckell/">https://www.linkedin.com/in/andrew-mckell/</a>.
-                <br> I can be reached by email at amckell33@gmail.com and by phone at 403-966-1332.
+                Have a question or want to discuss something? Reach out to me below!
             </p>
+            <div class="social-links">
+                <a href="mailto:amckell33@gmail.com">
+                    <span class="social-icon icon-mail"></span>
+                </a>
+                <a href="https://github.com/andrewmckell">
+                    <span class="social-icon icon-github"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/andrew-mckell/">
+                    <span class="social-icon icon-linkedin"></span>
+                </a>
+            </div>
         </section>
     </main>
 </body>
