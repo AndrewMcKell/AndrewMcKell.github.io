@@ -319,6 +319,10 @@ a:focus-visible {
     color: var(--muted)
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @media (max-width: 700px) {
     .site-header nav {
         flex-direction: column;
@@ -337,5 +341,11 @@ a:focus-visible {
 
     .hero-photo {
         max-width: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { 
+        scroll-behavior: a;
     }
 }
