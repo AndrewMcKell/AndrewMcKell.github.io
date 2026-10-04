@@ -153,33 +153,6 @@ a:focus-visible {
     overflow-wrap: anywhere;
 }
 
-.project-card {
-    padding: 28px;
-    background: var(--surface);
-    border-bottom: 3px solid var(--accent);
-}
-
-.project-card h3 {
-    margin-top: 0;
-}
-
-.project-card p {
-    color: var(--muted);
-}
-
-.page {
-    padding-block: 60px;
-}
-
-.page h1 {
-    font-size: 40px;
-}
-
-.page p {
-    max-width: 750px;
-    color: var(--muted);
-}
-
 .profile-photo {
     width: 240px;
     aspect-ratio: 1;
@@ -234,6 +207,116 @@ a:focus-visible {
 .social-links a:hover,
 .social-links a:focus-visible {
     background: var(--surface);
+}
+
+.page {
+    padding-block: 60px 80px;
+}
+
+.page h1 {
+    margin: 0 0 16px;
+    font-size: clamp(32px, 5vw, 44px);
+    line-height: 1.2;
+}
+
+.page p {
+    color: var(--muted);
+}
+
+.page-heading {
+    margin-bottom: 40px;
+}
+
+.page-heading > p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.experience-entry {
+    padding: clamp(24px, 4vw, 36px);
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+}
+
+.experience-entry .experience-organization {
+    margin: 0 0 4px;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.experience-entry .experience-meta {
+    margin: 0;
+}
+
+.experience-entry > p {
+    margin: 20px 0 0;
+}
+
+.experience-highlights {
+    margin: 20px 0 0;
+    padding-left: 20px;
+    color: var(--muted);
+}
+
+.experience-highlights li + li {
+    margin-top: 10px;
+}
+
+.project-list,
+.experience-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+}
+
+.project-card {
+    display: block;
+    padding: clamp(24px, 4vw, 36px);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-bottom: 3px solid var(--accent);
+    border-radius: 6px;
+}
+
+.project-card h2,
+.experience-entry h2 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.project-card p {
+    margin: 0 0 20px;
+}
+
+.project-card-link {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+    background: #292929;
+    border-color: var(--accent);
+}
+
+.project-card:hover .project-card-link,
+.project-card:focus-visible .project-card-link {
+    text-decoration: underline;
+}
+
+.project-detail-section {
+    margin-top: 40px;
+}
+
+.project-detail-section ul,
+.project-detail-section li {
+    color: var(--muted)
 }
 
 @media (max-width: 700px) {

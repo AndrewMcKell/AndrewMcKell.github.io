@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew McKell | Movie Recommender</title>
+    <meta name="description" content="Movie recommender project">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container">
+            <a class="logo" href="index.html">Home</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="experience.html">Experience</a>
+                <a class="active" href="projects.html">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page container">
+        <a href="projects.html">← Back to projects</a>
+        <header class="page-heading">
+            <h1>Movie Recommender</h1>
+            <p>
+                A Python tool that recommends movies based on a movie selected by the user.
+            </p>
+        </header>
+        
+        <div class="actions">
+            <a class="button primary" href="https://github.com/andrewmckell/movie_recommender">
+                View project on GitHub
+            </a>
+        </div>
+
+        <section class="project-detail-section">
+            <h2>Motivation</h2>
+            <p>
+                As someone who loves to watch movies in my free time, I frequently 
+                find myself struggling to decide what to watch. To solve this 
+                problem, I wanted to create a tool that could recommend a movie 
+                depending on what I felt like watching. I was inspired by Letterboxd, 
+                a social network that allows users to log and rate movies. One of 
+                Letterboxd's best-known features allows users to decorate their 
+                profile by providing their top four movies. I decided to extend this 
+                concept by asking "If I can provide my four favourite movies (or just 
+                several movies that have elements that I like), can I make a tool 
+                that can find me something new to watch?" 
+            </p>
+            <h2>Approach</h2>
+            <p>
+                After researching several film databases, I decided to use The Movie 
+                Database (TMDB) for this project. TMBD stores data on films, including 
+                genres, cast and crew, and keywords, alongside integer ids. Ids are 
+                helpful in this case for several reasons, including ensuring 
+                distinction between similar movie elements (I would like to avoid 
+                recommending the horror movie "Frozen" to people who enjoyed the 
+                Disney movie "Frozen"). The movie recommender tool uses the TMDB API 
+                to request movies based on user input, store their data in a custom 
+                class, and use this data to request again and find similar movies. 
+                From there, overall similarity scores between each candidate movie and 
+                the input movies are calculated, and the tool returns the movies it 
+                found with the highest similarity. 
+            </p>
+            <h2>Use</h2>
+            <p>
+                To use the tool, a user enters the title of a movie that they would 
+                like their recommendations to be related to. They then adjust the 
+                weights related to genre, keywords/key ideas, cast, and director. 
+                This allows the user to decide whether the recommended movies should 
+                share ideas, actors, or genre with the input movie, and the balance 
+                of these parameters. From there, the tool searches TMDB for movies 
+                that share parameters with the input movie. These results are 
+                processed, and the unique id for each parameter in each candidate 
+                movie is found. The set of ids associated with each parameter are 
+                compared between the input movie and each candidate using the Jaccard 
+                index: 
+            </p>
+            <p>
+                \[
+                    J(A, B) = \frac{|A \cap B|}{|A \cup B|}
+                \]
+            </p>
+            <p>
+                Each index is multiplied by the corresponding weight set by the user, 
+                and we can sum these results to get an overall similarity score 
+                between the input movie and each candidate. Finally, the candidates 
+                with the highest scores are returned as the tool’s official 
+                recommendation. 
+            </p>
+            <h2>Next Steps</h2>
+            <p>
+                This project is a work in progress. The next things I plan to add are:
+            </p>
+            <ul>
+                <li>Allow for multiple movie inputs</li>
+                <li>Add movie length settings</li>
+                <li>Add a Graphical User Interface (GUI)</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
