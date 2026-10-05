@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew McKell | Autonomous Robot</title>
+    <meta name="description" content="Autonomous robot project">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container">
+            <a class="logo" href="index.html">Home</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="experience.html">Experience</a>
+                <a class="active" href="projects.html">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page container">
+        <a href="projects.html">← Back to projects</a>
+        <header class="page-heading">
+            <h1>Autonomous Robot</h1>
+            <p>
+                A robot built to retrieve targets from hazardous environments. 
+            </p>
+        </header>
+
+        <section class="project-detail-section">
+            <p>
+                As part of a team of four, I designed, built, and competed with an 
+                autonomous robot capable of seeking out and rescuing small stuffed 
+                animals (“pets”) from an obstacle-filled environment. Our robot 
+                placed 2nd out of 15 teams in the final course competition.
+            </p>
+            <p>
+                The challenge was to engineer a robot that could navigate a defined 
+                course and identify, collect, and deliver seven pets to a designated 
+                safe zone. The pets were placed in varied and challenging positions: 
+                behind obstructions, on top of pedestals, in corners, and one in an 
+                open area. Each pet was marked with a small magnet for detection.
+            </p>
+            <p>
+                Our solution integrated a range of hardware and control systems:
+            </p>
+            <ul>
+                <li>
+                    LiDAR for initial target detection and navigation support
+                </li>
+                <li>
+                    Infrared reflectance sensor array in a PID feedback loop for 
+                    line-following navigation
+                </li>
+                <li>
+                    Dual triple-axis magnetometers to guide the robotic claw with 
+                    precision toward magnetic targets
+                </li>
+                <li>
+                    ESP32 microcontrollers, servos, DC motors, and other fundamental 
+                    drive and control components
+                </li>
+            </ul>
+            <p>
+                The robot was powered by three lithium-polymer batteries, and its 
+                chassis, storage bay, and robotic arm were built from laser-cut 
+                hardboard and 3D-printed PLA components.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
