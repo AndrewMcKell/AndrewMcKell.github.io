@@ -87,11 +87,17 @@
                 \]
             </p>
             <p>
-                Each index is multiplied by the corresponding weight set by the user, 
-                and we can sum these results to get an overall similarity score 
-                between the input movie and each candidate. Finally, the candidates 
-                with the highest scores are returned as the tool’s official 
-                recommendation. 
+                Where A is the set of ids belonging to a given parameter for the input
+                movie, and B is the set of ids belonging to the same parameter for a
+                candidate movie. For example, if the input movie is a crime drama, and 
+                a certain candidate is a crime comedy, A would be {crime, drama}, B 
+                would be {crime, comedy}, the intersection of A and B would be {crime}, 
+                and the union of A and B would be {crime, drama, comedy}. Therefore, 
+                the resulting index is 1/3. Each index is multiplied by the 
+                corresponding weight set by the user, and we can sum these results to 
+                get an overall similarity score between the input movie and each 
+                candidate. Finally, the candidates with the highest scores are 
+                returned as the tool’s official recommendation. 
             </p>
             <h2>Next Steps</h2>
             <p>
