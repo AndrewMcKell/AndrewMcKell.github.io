@@ -281,6 +281,22 @@ a:focus-visible {
     border-radius: 6px;
 }
 
+.project-card:hover,
+.project-card:focus-visible,
+.experience-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgb(0 0 0 / 25%);
+}
+
+.project-card,
+.experience-entry {
+    transition: 
+        transform 200ms ease,
+        background-color 200ms ease,
+        border-color 200ms ease,
+        box-shadow 200ms ease;
+}
+
 .project-card h2,
 .experience-entry h2 {
     margin: 0 0 12px;
@@ -346,6 +362,17 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
     html { 
-        scroll-behavior: a;
+        scroll-behavior: auto;
+    }
+
+    .project-card,
+    .experience-entry {
+        transition: none;
+    }
+
+    .project-card:hover,
+    .project-card:focus-visible,
+    .experience-entry:hover {
+        transform: none;
     }
 }
