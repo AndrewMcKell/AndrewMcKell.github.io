@@ -335,6 +335,31 @@ a:focus-visible {
     color: var(--muted)
 }
 
+.project-figure {
+    margin: 32px 0;
+}
+
+.project-figure img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-inline: auto;
+    border-radius: 6px;
+}
+
+.project-figure figcaption {
+    max-width: 800px;
+    margin: 12px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
 html {
     scroll-behavior: smooth;
 }
