@@ -341,7 +341,7 @@ a:focus-visible {
 
 .project-figure img {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     height: auto;
     margin-inline: auto;
     border-radius: 6px;
@@ -350,8 +350,8 @@ a:focus-visible {
 .project-figure figcaption {
     max-width: 800px;
     margin: 12px auto 0;
-    color: var(--muted);
-    font-size: 14px;
+    color: var(--text);
+    font-size: 18px;
     text-align: center;
 }
 

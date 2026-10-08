@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew McKell | Simulated Detective Vehicle</title>
+    <meta name="description" content="Simulated detective vehicle project">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container">
+            <a class="logo" href="index.html">Home</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="experience.html">Experience</a>
+                <a class="active" href="projects.html">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page container">
+        <a class="back-link" href="projects.html">← Back to projects</a>
+        <header class="page-heading">
+            <h1>Simulated Detective Vehicle</h1>
+            <p>
+                A simulated robotic vehicle that navigates its environment and reads clues.
+            </p>
+        </header>
+
+        <div class="actions">
+            <a class="button primary" href="https://github.com/evanlicanada/ENPH353-team-9-competition-stuff">
+                View project on GitHub
+            </a>
+        </div>
+
+        <section class="project-detail-section">
+            <p>
+                As part of a team of two, I developed and competed with an autonomous 
+                robot in a simulated environment, using computer vision and machine 
+                learning to navigate a course and read clues to solve a fictional 
+                crime. 
+            </p>
+            <p>
+                The challenge was to navigate an environment containing paved roads, 
+                grassy paths, and a mountain climb, while avoiding pedestrians and 
+                other vehicles. Clues were written on signs throughout the course, 
+                requiring the robot to detect signs and interpret their text using its 
+                onboard camera.
+            </p>
+            <p>
+                Our solution integrated a range of image processing, machine learning, 
+                and control systems:
+            </p>
+            <ul>
+                <li>
+                    OpenCV image processing to identify road boundaries and estimate 
+                    the centre of the lane
+                </li>
+                <li>
+                    A PID feedback controller for camera-based line following, with 
+                    boundary tracking to handle turns where one road edge moved out 
+                    of view
+                </li>
+                <li>
+                    Colour filtering and perspective transformations to detect signs 
+                    and prepare their text for recognition
+                </li>
+                <li>
+                    A convolutional recurrent neural network built in PyTorch to read 
+                    text, with repeated readings combined to improve reliability
+                </li>
+                <li>
+                    ROS nodes to coordinate navigation, sign recognition, and 
+                    submission of clues to the competition’s scoring system
+                </li>
+            </ul>
+            <p>
+                The text recognition model was trained on 1,000 synthetic images with 
+                varying levels of blur and distortion, achieving 99.32% accuracy on a 
+                synthetic validation set.
+            </p>
+
+            <figure class="project-figure">
+                <img src="images/competition.gif" alt="The simulated competition environment">
+                <figcaption>
+                    The simulated competition environment.
+                    Credit: 
+                    <a href="https://projectlab.engphys.ubc.ca/enph-353/">
+                        Boye Ahlborn Engineering Physics Project Lab
+                    </a>
+                </figcaption>
+            </figure>
+
+            <figure class="project-figure">
+                <img src="images/sim_robot.png" alt="Our robot">
+                <figcaption>Our robot</figcaption>
+            </figure>
+
+            <figure class="project-figure">
+                <img src="images/ros_robot_sw_diagram.png" alt="High-level software diagram">
+                <figcaption>High-level software diagram</figcaption>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>
