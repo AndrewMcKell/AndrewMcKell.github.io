@@ -56,7 +56,7 @@
             <p>
                 After researching several film databases, I decided to use The Movie 
                 Database (TMDB) for this project. TMBD stores data on films, including 
-                genres, cast and crew, and keywords, alongside integer ids. Ids are 
+                genres, cast and crew, and keywords, alongside integer IDs. IDs are 
                 helpful in this case for several reasons, including ensuring 
                 distinction between similar movie elements (I would like to avoid 
                 recommending the horror movie "Frozen" to people who enjoyed the 
@@ -76,8 +76,8 @@
                 share ideas, actors, or genre with the input movie, and the balance 
                 of these parameters. From there, the tool searches TMDB for movies 
                 that share parameters with the input movie. These results are 
-                processed, and the unique id for each parameter in each candidate 
-                movie is found. The set of ids associated with each parameter are 
+                processed, and the unique ID for each parameter in each candidate 
+                movie is found. The set of IDs associated with each parameter are 
                 compared between the input movie and each candidate using the Jaccard 
                 index: 
             </p>
@@ -87,8 +87,8 @@
                 \]
             </p>
             <p>
-                Where A is the set of ids belonging to a given parameter for the input
-                movie, and B is the set of ids belonging to the same parameter for a
+                Where A is the set of IDs belonging to a given parameter for the input
+                movie, and B is the set of IDs belonging to the same parameter for a
                 candidate movie. For example, if the input movie is a crime drama, and 
                 a certain candidate is a crime comedy, A would be {crime, drama}, B 
                 would be {crime, comedy}, the intersection of A and B would be {crime}, 
