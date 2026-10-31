@@ -339,7 +339,9 @@ a:focus-visible {
     margin: 32px 0;
 }
 
-.project-figure img {
+.project-figure img,
+.project-figure video {
+    display: block;
     width: 100%;
     max-width: 800px;
     height: auto;

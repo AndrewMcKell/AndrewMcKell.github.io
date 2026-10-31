@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew McKell | Assembly Development Board Calculator</title>
+    <meta name="description" content="Dev board calculator project">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="media/icons/favicon.svg">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container">
+            <a class="logo" href="index.html">Home</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="experience.html">Experience</a>
+                <a class="active" href="projects.html">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page container">
+        <a class="back-link" href="projects.html">← Back to projects</a>
+        <header class="page-heading">
+            <h1>Assembly Development Board Calculator</h1>
+            <p>
+                A calculator capable of addition, subtraction, multiplication, integer division,
+                and finding the missing side of a right triangle given two sides.
+            </p>
+        </header>
+
+        <section class="project-detail-section">
+            <p>
+                I developed a calculator in 8051 assembly for a MAX10-based development
+                board, using a 4×4 keypad for input and seven-segment displays for
+                output. This project combined low-level hardware interaction, numerical
+                computation, and input validation to provide an interactive calculator.
+            </p>
+
+            <p>
+                The program supports addition, subtraction, multiplication, and
+                integer division, along with calculations for finding the hypotenuse
+                or a missing side of a right triangle. It used a 32-bit arithmetic
+                library and an iterative integer square-root routine to perform these
+                calculations.
+            </p>
+
+            <p>
+                The key features were:
+            </p>
+
+            <ul>
+                <li>
+                    Keypad scanning and software debouncing
+                </li>
+                <li>
+                    Binary-coded decimal input and conversion routines for numerical
+                    processing and display
+                </li>
+                <li>
+                    Digit correction and a display mode for viewing the upper digits
+                    of larger numbers
+                </li>
+                <li>
+                    An LED indicator for negative subtraction results
+                </li>
+                <li>
+                    Checks for out-of-range inputs, arithmetic overflow, division by
+                    zero, and invalid triangle inputs
+                </li>
+            </ul>
+
+            <p>
+                I organized the program into reusable macros and subroutines for input
+                handling, display control, calculations, and error recovery.
+            </p>
+
+            <figure class="project-figure">
+                <video controls playsinline muted preload="metadata">
+                    <source src="media/calculator_demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>
+                    Demonstration of keypad input and calculations on the development board.
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>

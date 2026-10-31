@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew McKell | Closed-Loop DC Motor Speed Controller</title>
+    <meta name="description" content="Motor speed controller project">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="media/icons/favicon.svg">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container">
+            <a class="logo" href="index.html">Home</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="experience.html">Experience</a>
+                <a class="active" href="projects.html">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page container">
+        <a class="back-link" href="projects.html">← Back to projects</a>
+        <header class="page-heading">
+            <h1>Closed-Loop DC Motor Speed Controller</h1>
+            <p>
+                A circuit that controls the speed of a motor using optical feedback.
+            </p>
+        </header>
+
+        <section class="project-detail-section">
+            <p>
+                I built and tested a closed-loop circuit that controlled the speed of
+                a DC motor using optical feedback, digital logic, and analog electronics.
+                A potentiometer provided an adjustable speed setpoint, while the
+                feedback circuit measured the motor’s rotation and adjusted its drive
+                current.
+            </p>
+
+            <p>
+                The system integrated several modules:
+            </p>
+
+            <ul>
+                <li>
+                    An LED and phototransistor detected slots in a rotating disc,
+                    generating pulses proportional to motor speed.
+                </li>
+                <li>
+                    An 8-bit counter and latch measured and stored the pulse count
+                    over a fixed sampling interval.
+                </li>
+                <li>
+                    An R-2R resistor ladder converted the digital count into an analog
+                    voltage.
+                </li>
+                <li>
+                    An op-amp error amplifier compared the measured speed signal with
+                    the setpoint.
+                </li>
+                <li>
+                    A transistor motor driver adjusted the motor current in response
+                    to the feedback signal.
+                </li>
+            </ul>
+
+            <p>
+                I assembled and tested each module individually before integrating the
+                complete circuit, using an oscilloscope and digital logic measurements
+                to verify timing, pulse counting, and signal processing. During
+                development, I ran into many issues to debug and correct. For example,
+                the op-ap output voltage was offset, which I was able to fix by placing
+                a resistor across the feedback capacitor to provide a DC feedback path
+                to the op-amp.
+            </p>
+
+            <figure class="project-figure">
+                <img src="media/motor_controller_view.png" alt="View of circuit">
+                <figcaption>View of the circuit without the motor</figcaption>
+            </figure>
+
+            <figure class="project-figure">
+                <img src="media/motor_controller_error_signal_amplifier.png" alt="Schematic of the op-amp amplifier">
+                <figcaption>Schematic of the op-amp error amplifier</figcaption>
+            </figure>
+
+            <figure class="project-figure">
+                <img src="media/motor_controller_counter_latch_dac_buffer.jpeg" alt="Schematic of the latch, dac, and buffer">
+                <figcaption>Schematic of the latch, counter, and digital to analog converter</figcaption>
+            </figure>
+
+            <figure class="project-figure">
+                <img src="media/motor_controller_latch_reset.png" alt="Latch and reset waveform">
+                <figcaption>Oscilloscope reading of the latch and reset pulse</figcaption>
+            </figure>
+        </section>
+    </main>
+</body>
+</html>
